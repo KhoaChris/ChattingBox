@@ -1,49 +1,78 @@
 <div class="navbar">
   <div class="navbarContents">
-    <button mat-icon-button aria-label="Example icon-button with a menu">
-      <mat-icon>more_vert</mat-icon>
+    <div class="logo-holder logo-4">
+      <h3>GrisChat</h3>
+    </div>
+    <button mat-icon-button class="homeButton">
+      <mat-icon>home</mat-icon>
     </button>
-    <button id="logInButton" mat-raised-button *ngIf="user === null" (click)="logIn()">Log In</button>
-    <button id="logOutButton" mat-raised-button *ngIf="user !== null" (click)="logOut()">Log Out</button>
+    <button mat-icon-button class="optionsButton">
+      <mat-icon>view_list</mat-icon>
+    </button>
+    <button
+      id="logInButton"
+      mat-icon-button
+      *ngIf="user === null"
+      (click)="logIn()"
+    >
+      <mat-icon>login</mat-icon>
+    </button>
+    <button
+      id="logOutButton"
+      mat-icon-button
+      *ngIf="user !== null"
+      (click)="logOut()"
+    >
+      <mat-icon>logout</mat-icon>
+    </button>
   </div>
 </div>
 
 <div class="container clearfix">
   <div class="people-list" id="people-list">
+    <div class="content">
+      Chats
+      <div class="helpButton">
+        <mat-icon>help</mat-icon>
+      </div>
+    </div>
     <div class="search">
-      <input type="text" placeholder="search" />
+      <input type="text" placeholder="Search Messenger" />
       <i class="fa fa-search"></i>
     </div>
     <ul class="list">
       <li class="clearfix">
         <img
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01.jpg"
+          src="https://www.sports-king.com/images/nicknames/kaka-footballer.jpg"
+          style="height: 55px; width: 55px"
           alt="avatar"
         />
         <div class="about">
-          <div class="name">Quân</div>
+          <div class="name">Quả bóng vàng 2007</div>
+          <div class="status"><i class="fa fa-circle online"></i>online</div>
+        </div>
+      </li>
+
+      <li class="clearfix">
+        <img
+          src="https://i.pinimg.com/originals/83/45/0e/83450e177909f9658cbd7bfd2013093b.jpg"
+          style="height: 55px; width: 55px"
+          alt="avatar"
+        />
+        <div class="about">
+          <div class="name">Anh Bảy Siuuuuuu</div>
           <div class="status"><i class="fa fa-circle online"></i> online</div>
         </div>
       </li>
 
       <li class="clearfix">
         <img
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_05.jpg"
+          src="https://cdnmedia.baotintuc.vn/2013/05/17/09/54/David-Beckham.jpg"
+          style="height: 55px; width: 55px"
           alt="avatar"
         />
         <div class="about">
-          <div class="name">Ginger Johnston</div>
-          <div class="status"><i class="fa fa-circle online"></i> online</div>
-        </div>
-      </li>
-
-      <li class="clearfix">
-        <img
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_06.jpg"
-          alt="avatar"
-        />
-        <div class="about">
-          <div class="name">Tracy Carpenter</div>
+          <div class="name">Sút phạt cháy sườn</div>
           <div class="status">
             <i class="fa fa-circle offline"></i> left 30 mins ago
           </div>
@@ -52,11 +81,12 @@
 
       <li class="clearfix">
         <img
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_07.jpg"
+          src="https://www.sports-king.com/images/nicknames/thierry-henry.jpg"
+          style="height: 55px; width: 55px"
           alt="avatar"
         />
         <div class="about">
-          <div class="name">Christian Kelly</div>
+          <div class="name">Chạy như bay</div>
           <div class="status">
             <i class="fa fa-circle offline"></i> left 10 hours ago
           </div>
@@ -65,35 +95,12 @@
 
       <li class="clearfix">
         <img
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_08.jpg"
+          src="https://pbs.twimg.com/media/EDFoTLzW4AI4pei?format=jpg&name=large"
+          style="height: 55px; width: 55px"
           alt="avatar"
         />
         <div class="about">
-          <div class="name">Monica Ward</div>
-          <div class="status"><i class="fa fa-circle online"></i> online</div>
-        </div>
-      </li>
-
-      <li class="clearfix">
-        <img
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_09.jpg"
-          alt="avatar"
-        />
-        <div class="about">
-          <div class="name">Dean Henry</div>
-          <div class="status">
-            <i class="fa fa-circle offline"></i> offline since Oct 28
-          </div>
-        </div>
-      </li>
-
-      <li class="clearfix">
-        <img
-          src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_10.jpg"
-          alt="avatar"
-        />
-        <div class="about">
-          <div class="name">Peyton Mckinney</div>
+          <div class="name">Anh Rô vẩu</div>
           <div class="status"><i class="fa fa-circle online"></i> online</div>
         </div>
       </li>
@@ -103,15 +110,22 @@
   <div class="chat">
     <div class="chat-header clearfix">
       <img
-        src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01_green.jpg"
+        src="https://www.sports-king.com/images/nicknames/kaka-footballer.jpg"
+        style="height: 55px; width: 55px"
         alt="avatar"
       />
 
       <div class="chat-about">
-        <div class="chat-with">Chat with Vincent Porter</div>
-        <div class="chat-num-messages">already 1 902 messages</div>
+        <div class="chat-with">Chat with Quả bóng vàng 2007</div>
       </div>
-      <i class="fa fa-star"></i>
+
+      <div class="info">
+        <mat-icon>info</mat-icon>
+      </div>
+
+      <div class="phone">
+        <mat-icon>phone</mat-icon>
+      </div>
     </div>
 
     <div class="chat-history">
@@ -119,8 +133,8 @@
         <li *ngFor="let chat of chats$ | async">
           <ng-container *ngIf="chat.from === fromUID; else other">
             <div class="message-data align-right">
-              <span class="message-data-time">10:10 AM, Today</span> &nbsp;
-              &nbsp; <span class="message-data-name">Olia</span>
+              <!-- <span class="message-data-time">{{chat.sendAt}}</span> &nbsp; -->
+              &nbsp; <span class="message-data-name">{{ chat.from }}</span>
               <i class="fa fa-circle me"></i>
             </div>
             <div class="message other-message float-right">
@@ -130,10 +144,10 @@
 
           <ng-template #other>
             <div class="message-data">
-              <span class="message-data-name"
-                ><i class="fa fa-circle online"></i> Vincent</span
-              >
-              <span class="message-data-time">10:12 AM, Today</span>
+              <span class="message-data-name">
+                <i class="fa fa-circle online"></i>{{ chat.from }}
+              </span>
+              <!-- <span class="message-data-time">10:12 AM, Today</span> -->
             </div>
             <div class="message my-message">
               {{ chat.message }}
@@ -147,16 +161,27 @@
       <textarea
         name="message-to-send"
         id="message-to-send"
-        placeholder="Type your message"
-        rows="3"
+        placeholder="Type your message here"
+        rows="2"
         [(ngModel)]="message"
         [disabled]="fromUID === ''"
       ></textarea>
 
-      <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
-      <i class="fa fa-file-image-o"></i>
+      <!-- <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
+      <i class="fa fa-file-image-o"></i> -->
 
-      <button (click)="sendMessage()" [disabled]="fromUID === ''">Send</button>
+      <div class="lowerActions">
+        <button (click)="sendMessage()">Send</button>
+        <div class="mic">
+          <mat-icon>mic_none</mat-icon>
+        </div>
+        <div class="emotions">
+          <mat-icon> insert_emoticon</mat-icon>
+        </div>
+        <div class="insertLink">
+          <mat-icon> insert_link</mat-icon>
+        </div>
+      </div>
     </div>
   </div>
 </div>
