@@ -37,10 +37,12 @@ export class AppComponent {
 
   logIn(){
     this.authService.loginWithGoogle();
+    alert ('Successfully logged in');
   }
 
   logOut(){
     this.authService.logoutWithGoogle();
+    alert('Successfully logged out');
   }
 
 }

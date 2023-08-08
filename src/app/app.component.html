@@ -1,6 +1,11 @@
 <div class="navbar">
-  <button *ngIf="user === null" (click)="logIn()">Log In</button>
-  <button *ngIf="user !== null" (click)="logOut()">Log Out</button>
+  <div class="navbarContents">
+    <button mat-icon-button aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <button id="logInButton" mat-raised-button *ngIf="user === null" (click)="logIn()">Log In</button>
+    <button id="logOutButton" mat-raised-button *ngIf="user !== null" (click)="logOut()">Log Out</button>
+  </div>
 </div>
 
 <div class="container clearfix">

@@ -9,6 +9,38 @@ $gray: #92959E;
   box-sizing: border-box;
 }
 
+.navbar{
+  box-sizing: border-box;
+  background-color: white ;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.15);
+  display: block;
+}
+
+.navbarContents{
+  box-sizing: border-box;
+  background-color: white;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: block;
+  align-items: center;
+  height: inherit;
+}
+
+#logInButton{
+  float: right;
+  margin: 20px auto;
+} 
+
+#logOutButton{
+  float: right;
+  margin: 20px auto;
+}
+
 body {
   background: #C5DDEB;
   font: 14px/20px "Lato", Arial, sans-serif;
@@ -20,7 +52,9 @@ body {
   margin: 0 auto;
   width: 750px;
   background: #444753;
-  border-radius: 5px;
+  border-radius: 10px;
+  margin-top: 30px;
+  height: 870px;
 }
 
 .people-list {
@@ -81,8 +115,9 @@ body {
   width: 490px;
   float:left;
   background: #F2F5F8;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 870px;
   
   color: #434651;
   
