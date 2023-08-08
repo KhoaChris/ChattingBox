@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "chatting-box",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

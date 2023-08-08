@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "chatting-1a2d7": {
+      "hosting": {
+        "chatting-box": [
+          "chatting-1a2d7"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "chatting-1a2d7"
+  }
+}

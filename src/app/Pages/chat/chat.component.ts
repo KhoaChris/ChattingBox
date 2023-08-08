@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
-import { ChatService } from './services/chat.service';
-import { AuthService } from './services/auth.service';
+import { ActivatedRoute } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
+import { ChatService } from 'src/app/services/chat.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-chat',
+  templateUrl: './chat.component.html',
+  styleUrls: ['./chat.component.scss']
 })
-export class AppComponent {
-  title(title: any) {
-    throw new Error('Method not implemented.');
-  }
+export class ChatComponent {
   fromUID: string = '';
   user: any;
   message: string = '';
@@ -20,7 +18,7 @@ export class AppComponent {
   ngOnInit(): void {
     this.authService.user$.subscribe((user: any) => {
       this.user = user;
-      this.fromUID = user.uid;
+      this.fromUID = user.fromUID;
     })
   }
 
@@ -32,15 +30,6 @@ export class AppComponent {
       sendAt: Date.now(),
     }
     this.chatService.addChat(chat);
-    this.message = '';
-  }
-
-  logIn(){
-    this.authService.loginWithGoogle();
-  }
-
-  logOut(){
-    this.authService.logoutWithGoogle();
   }
 
 }
