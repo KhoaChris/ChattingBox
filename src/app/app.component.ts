@@ -32,12 +32,19 @@ export class AppComponent {
     if (this.user == null) {
       alert('Please login first to use this function');
     } else {
-      let chat = {
-        from: this.fromUID,
-        to: '',
-        message: this.message,
-        sendAt: Date.now(),
-      };
+    }
+    let chat = {
+      from: this.fromUID,
+      to: '',
+      message: this.message,
+      sendAt: Date.now(),
+    };
+    if (this.message == '') {
+      this.message = '';
+      alert('Please enter a message');
+    } else if (this.message) {
+      this.message = '';
+    } else {
       this.chatService.addChat(chat);
       this.message = '';
     }
