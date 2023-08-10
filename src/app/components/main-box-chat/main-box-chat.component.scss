@@ -6,7 +6,7 @@ $blue: #94c2ed;
 $orange: #e38968;
 $gray: #92959e;
 
-// *, 
+// *,
 // *:before,
 // *:after {
 //   box-sizing: border-box;
@@ -144,7 +144,7 @@ $gray: #92959e;
     ul {
       li {
         list-style: none;
-        
+
         .message-data {
           margin: 10px 0;
         }
@@ -240,12 +240,11 @@ $gray: #92959e;
         margin-right: 10px;
       }
 
-      mat-icon{
+      mat-icon {
         font-size: 28px;
         height: 30px;
         width: 30px;
       }
-
     }
   }
 }
