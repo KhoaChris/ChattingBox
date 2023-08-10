@@ -100,25 +100,22 @@
 
       <div class="chat-history">
         <ul>
-          <li *ngFor="let chat of chats$ | async">
+          <li class="listMessage" *ngFor="let chat of chats$ | async">
             <ng-container *ngIf="chat.from === fromUID; else other">
               <div class="message-data align-right">
-                <!-- <span class="message-data-time">{{chat.sendAt}}</span> &nbsp; -->
                 <span class="message-data-name">{{ chat.from }}</span>
-                <i class="fa fa-circle me"></i>
               </div>
               <div class="message other-message float-right">
-                {{ chat.message }}
+                <span style="line-break: auto;word-wrap: break-word;">{{ chat.message }}</span>
               </div>
             </ng-container>
 
             <ng-template #other>
               <div class="message-data">
                 <span class="message-data-name">{{ chat.from }}</span>
-                <i class="fa fa-circle online"></i>
               </div>
               <div class="message my-message">
-                {{ chat.message }}
+                <span style="line-break: auto;word-wrap: break-word;">{{ chat.message }}</span>
               </div>
             </ng-template>
           </li>

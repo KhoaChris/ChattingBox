@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Auth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, user } from '@angular/fire/auth';
+import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 
 @Injectable({
@@ -8,7 +9,7 @@ import { Subject } from 'rxjs';
 export class AuthService {
   user$ = new Subject();
 
-  constructor(private auth: Auth) {
+  constructor(private auth: Auth, private router: Router) {
     onAuthStateChanged(this.auth, (user) => {
       this.user$.next(user);
     })
@@ -21,5 +22,6 @@ export class AuthService {
 
   logoutWithGoogle(){
     this.auth.signOut();
+    
   }
 }

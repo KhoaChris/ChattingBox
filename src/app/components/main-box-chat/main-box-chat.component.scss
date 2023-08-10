@@ -6,13 +6,11 @@ $blue: #94c2ed;
 $orange: #e38968;
 $gray: #92959e;
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-
+// *, 
+// *:before,
+// *:after {
+//   box-sizing: border-box;
+// }
 
 .container {
   margin: 0 0 auto 0;
@@ -44,6 +42,7 @@ $gray: #92959e;
   .search {
     padding-top: 10px;
     padding-left: 20px;
+    padding-right: 20px;
   }
 
   input {
@@ -56,10 +55,10 @@ $gray: #92959e;
     font-size: 14px;
   }
 
-  .fa-search {
-    position: relative;
-    left: -25px;
-  }
+  // .fa-search {
+  //   position: relative;
+  //   left: -25px;
+  // }
 
   ul {
     padding: 20px;
@@ -140,58 +139,54 @@ $gray: #92959e;
     padding: 30px 30px 20px;
     border-bottom: 2px solid white;
     overflow-y: scroll;
-    height: 575px;
-
-    .message-data {
-      margin-bottom: 15px;
-    }
-
-    .message-data-time {
-      color: lighten($gray, 8%);
-      padding-left: 6px;
-    }
+    height: 530px;
 
     ul {
       li {
         list-style: none;
-      }
-    }
+        
+        .message-data {
+          margin: 10px 0;
+        }
 
-    .message {
-      color: white;
-      padding: 18px 20px;
-      line-height: 26px;
-      font-size: 16px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      width: 90%;
-      position: relative;
+        .message {
+          color: white;
+          padding: 18px 20px;
+          line-height: 25px;
+          font-size: 16px;
+          border-radius: 15px;
+          margin-bottom: 20px;
+          width: 90%;
+          position: relative;
 
-      &:after {
-        bottom: 100%;
-        left: 7%;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-        border-bottom-color: $green;
-        border-width: 10px;
-        margin-left: -10px;
-      }
-    }
+          &:after {
+            bottom: 100%;
+            left: 7%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-bottom-color: $green;
+            border-width: 10px;
+            margin-left: -10px;
+          }
+        }
 
-    .my-message {
-      background: $green;
-    }
+        .my-message {
+          background: $green;
+        }
 
-    .other-message {
-      background: $blue;
+        .other-message {
+          background: $blue;
+          color: black;
 
-      &:after {
-        border-bottom-color: $blue;
-        left: 93%;
+          &:after {
+            border-bottom-color: $blue;
+            left: 93%;
+          }
+        }
       }
     }
   }
@@ -200,9 +195,9 @@ $gray: #92959e;
     padding: 30px;
 
     textarea {
-      width: 100%;
+      width: 95%;
       border: none;
-      padding: 10px 20px;
+      padding: 10px 20px 10px;
       font: 14px/22px "Lato", Arial, sans-serif;
       margin-bottom: 10px;
       border-radius: 20px;
@@ -245,10 +240,12 @@ $gray: #92959e;
         margin-right: 10px;
       }
 
-      mat-icon {
-        font-size: 27px;
-        color: #434651;
+      mat-icon{
+        font-size: 28px;
+        height: 30px;
+        width: 30px;
       }
+
     }
   }
 }

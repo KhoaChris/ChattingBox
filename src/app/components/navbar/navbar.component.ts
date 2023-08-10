@@ -28,6 +28,11 @@ export class NavbarComponent {
   logOut() {
     this.authService.logoutWithGoogle();
     alert('Successfully logged out');
+    this.refresh()
+  }
+
+  refresh(){
+    window.location.reload();
   }
 
 }
