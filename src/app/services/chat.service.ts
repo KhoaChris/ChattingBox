@@ -17,24 +17,24 @@ import { Socket } from 'ngx-socket-io';
   providedIn: 'root',
 })
 export class ChatService {
-  // chatCollection = collection(this.firestore, 'chat');
-  // chats$ = new Subject<Chat[]>();
+  chatCollection = collection(this.firestore, 'chat');
+  chats$ = new Subject<Chat[]>();
 
-  // constructor(private firestore: Firestore) {
-  //   onSnapshot(this.chatCollection, (querySnapShot) => {
-  //     const result = querySnapShot.docs;
-  //     const chats = result
-  //       .map((doc) => doc.data() as Chat)
-  //       .sort((a, b) => a.sendAt - b.sendAt);
-  //     this.chats$.next(chats);
-  //   });
-  // }
-
-  // async addChat(message: Chat){
-  //   await addDoc(this.chatCollection, message);
-  // }
-
-  constructor(public http: HttpClient, public socket: Socket){
-    
+  constructor(private firestore: Firestore) {
+    onSnapshot(this.chatCollection, (querySnapShot) => {
+      const result = querySnapShot.docs;
+      const chats = result
+        .map((doc) => doc.data() as Chat)
+        .sort((a, b) => a.sendAt - b.sendAt);
+      this.chats$.next(chats);
+    });
   }
+
+  async addChat(message: Chat){
+    await addDoc(this.chatCollection, message);
+  }
+
+  // constructor(public http: HttpClient, public socket: Socket){
+    
+  // }
 }

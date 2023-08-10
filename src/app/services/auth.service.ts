@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Auth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, user } from '@angular/fire/auth';
+import { Auth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup} from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { Subject } from 'rxjs';
 
@@ -15,13 +15,13 @@ export class AuthService {
     })
    }
 
-  loginWithGoogle(){
+  async loginWithGoogle(){
     const provider = new GoogleAuthProvider();
-    signInWithPopup(this.auth, provider);
+    let result = await signInWithPopup(this.auth, provider);
+    console.log(result);
   }
 
   logoutWithGoogle(){
     this.auth.signOut();
-    
   }
 }
