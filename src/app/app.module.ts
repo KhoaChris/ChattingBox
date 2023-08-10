@@ -13,6 +13,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LeftNavbarComponent } from './components/left-navbar/left-navbar.component';
 import { MainBoxChatComponent } from './components/main-box-chat/main-box-chat.component';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, LeftNavbarComponent, MainBoxChatComponent],
@@ -26,6 +28,8 @@ import { MainBoxChatComponent } from './components/main-box-chat/main-box-chat.c
     MatIconModule,
     MatButtonModule,
     NoopAnimationsModule,
+    StoreModule.forRoot({}, {}),
+    EffectsModule.forRoot([]),
   ],
   providers: [],
   bootstrap: [AppComponent],

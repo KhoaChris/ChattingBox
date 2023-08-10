@@ -28,7 +28,7 @@ export class ChatService {
     });
   }
 
-  async addChat(chat: Chat) {
-    await addDoc(this.chatCollection, chat);
+  async addChat(message: Chat){
+    await addDoc(this.chatCollection, message);
   }
 }
