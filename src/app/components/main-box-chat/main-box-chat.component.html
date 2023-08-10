@@ -1,0 +1,152 @@
+<div class="container clearfix">
+    <div class="people-list" id="people-list">
+      <div class="content">
+        Chats
+        <div class="helpButton">
+          <mat-icon>help</mat-icon>
+        </div>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Search Messenger" />
+        <i class="fa fa-search"></i>
+      </div>
+      <ul class="list">
+        <li class="clearfix">
+          <img
+            src="https://www.sports-king.com/images/nicknames/kaka-footballer.jpg"
+            style="height: 55px; width: 55px; border-radius: 50%"
+            alt="avatar"
+          />
+          <div class="about">
+            <div class="name">Quả bóng vàng 2007</div>
+            <div class="status"><i class="fa fa-circle online"></i>online</div>
+          </div>
+        </li>
+
+        <li class="clearfix">
+          <img
+            src="https://i.pinimg.com/originals/83/45/0e/83450e177909f9658cbd7bfd2013093b.jpg"
+            style="height: 55px; width: 55px; border-radius: 50%"
+            alt="avatar"
+          />
+          <div class="about">
+            <div class="name">Anh Bảy Siuuuuuu</div>
+            <div class="status"><i class="fa fa-circle online"></i> online</div>
+          </div>
+        </li>
+
+        <li class="clearfix">
+          <img
+            src="https://cdnmedia.baotintuc.vn/2013/05/17/09/54/David-Beckham.jpg"
+            style="height: 55px; width: 55px; border-radius: 50%"
+            alt="avatar"
+          />
+          <div class="about">
+            <div class="name">Sút phạt cháy sườn</div>
+            <div class="status">
+              <i class="fa fa-circle offline"></i> left 30 mins ago
+            </div>
+          </div>
+        </li>
+
+        <li class="clearfix">
+          <img
+            src="https://www.sports-king.com/images/nicknames/thierry-henry.jpg"
+            style="height: 55px; width: 55px; border-radius: 50%"
+            alt="avatar"
+          />
+          <div class="about">
+            <div class="name">Chạy như bay</div>
+            <div class="status">
+              <i class="fa fa-circle offline"></i> left 10 hours ago
+            </div>
+          </div>
+        </li>
+
+        <li class="clearfix">
+          <img
+            src="https://pbs.twimg.com/media/EDFoTLzW4AI4pei?format=jpg&name=large"
+            style="height: 55px; width: 55px; border-radius: 50%"
+            alt="avatar"
+          />
+          <div class="about">
+            <div class="name">Anh Rô vẩu</div>
+            <div class="status"><i class="fa fa-circle online"></i> online</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="chat">
+      <div class="chat-header clearfix">
+        <img
+          src="https://www.sports-king.com/images/nicknames/kaka-footballer.jpg"
+          style="height: 55px; width: 55px; border-radius: 50%"
+          alt="avatar"
+        />
+
+        <div class="chat-about">
+          <div class="chat-with">Chat with Quả bóng vàng 2007</div>
+        </div>
+
+        <div class="info">
+          <mat-icon>info</mat-icon>
+        </div>
+
+        <div class="phone">
+          <mat-icon>phone</mat-icon>
+        </div>
+      </div>
+
+      <div class="chat-history">
+        <ul>
+          <li *ngFor="let chat of chats$ | async">
+            <ng-container *ngIf="chat.from === fromUID; else other">
+              <div class="message-data align-right">
+                <!-- <span class="message-data-time">{{chat.sendAt}}</span> &nbsp; -->
+                <span class="message-data-name">{{ chat.from }}</span>
+                <i class="fa fa-circle me"></i>
+              </div>
+              <div class="message other-message float-right">
+                {{ chat.message }}
+              </div>
+            </ng-container>
+
+            <ng-template #other>
+              <div class="message-data">
+                <span class="message-data-name">{{ chat.from }}</span>
+                <i class="fa fa-circle online"></i>
+              </div>
+              <div class="message my-message">
+                {{ chat.message }}
+              </div>
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+
+      <div class="chat-message clearfix">
+        <textarea
+          name="message-to-send"
+          id="message-to-send"
+          placeholder="Type your message here"
+          rows="2"
+          [(ngModel)]="message"
+          [disabled]="fromUID === ''"
+        ></textarea>
+
+        <div class="lowerActions">
+          <button (click)="sendMessage()">Send</button>
+          <div class="mic">
+            <mat-icon>mic_none</mat-icon>
+          </div>
+          <div class="emotions">
+            <mat-icon> insert_emoticon</mat-icon>
+          </div>
+          <div class="insertLink">
+            <mat-icon> insert_link</mat-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

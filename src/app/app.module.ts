@@ -10,9 +10,12 @@ import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { LeftNavbarComponent } from './components/left-navbar/left-navbar.component';
+import { MainBoxChatComponent } from './components/main-box-chat/main-box-chat.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NavbarComponent, LeftNavbarComponent, MainBoxChatComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

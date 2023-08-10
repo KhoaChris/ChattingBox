@@ -1,0 +1,29 @@
+<div class="navbar">
+  <div class="navbarContents">
+    <div class="logo-holder logo-4">
+      <h3>GrisChat</h3>
+    </div>
+    <button mat-icon-button class="homeButton">
+      <mat-icon>home</mat-icon>
+    </button>
+    <button mat-icon-button class="optionsButton">
+      <mat-icon>view_list</mat-icon>
+    </button>
+    <button
+      id="logInButton"
+      mat-icon-button
+      *ngIf="user === null"
+      (click)="logIn()"
+    >
+      <mat-icon>login</mat-icon>
+    </button>
+    <button
+      id="logOutButton"
+      mat-icon-button
+      *ngIf="user !== null"
+      (click)="logOut()"
+    >
+      <mat-icon>logout</mat-icon>
+    </button>
+  </div>
+</div>
