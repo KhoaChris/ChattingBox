@@ -41,7 +41,7 @@ export class MainBoxChatComponent {
       } else if (!this.message.trim()) {
         this.message = '';
       } else {
-        this.chatService.addChat(chat);
+        // this.chatService.addChat(chat);
         this.message = '';
       }
     }

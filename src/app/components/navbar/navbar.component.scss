@@ -7,68 +7,103 @@ $orange: #e38968;
 $gray: #92959e;
 
 .navbar {
-    box-sizing: border-box;
-    background-color: white;
-    width: 100%;
-    height: 80px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
-    display: block;
+  box-sizing: border-box;
+  background-color: white;
+  width: 100%;
+  height: 80px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+.navbarContents {
+  box-sizing: border-box;
+  background-color: white;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+/* Logo-4 */
+.logo-4 h3 {
+  color: #88c5f9;
+  font-weight: 300;
+  font-size: 50px;
+  line-height: 0.65;
+  font-family: "Lobster", cursive;
+  height: fit-content;
+}
+
+.homeButton {
+  width: fit-content;
+  height: 80px;
+  margin-left: 260px;
+  padding-top: 10px;
+  color: #434651;
+  border: none;
+  background-color: white;
+
+  &:hover {
+    color: #39648d;
+    border-bottom: 3px solid #39648d;
   }
-  
-  .navbarContents {
-    box-sizing: border-box;
-    background-color: white;
-    width: 65%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 15px;
-    padding-left: 15px;
-    display: flex;
-    align-items: center;
-    height: inherit;
+}
+
+.optionsButton {
+  width: fit-content;
+  height: 80px;
+  margin-left: 10px;
+  padding-top: 10px;
+  color: #434651;
+  border: none;
+  background-color: white;
+
+  &:hover {
+    color: #39648d;
+    border-bottom: 3px solid #39648d;
   }
-  
-  /* Logo-4 */
-  .logo-4 h3 {
-    color: #88c5f9;
-    font-weight: 300;
-    font-size: 50px;
-    line-height: 0.65;
-    font-family: "Lobster", cursive;
-    height: fit-content;
+}
+
+.noAccountIcon{
+  width: fit-content;
+  height: 50px;
+  margin-left: 10px;
+  padding-top: 20px;
+  color: #434651;
+  border: none;
+  background-color: white;
+}
+
+#logInButton {
+  width: fit-content;
+  height: 80px;
+  margin-left: 7px;
+  padding-top: 10px;
+  color: #434651;
+  border: none;
+  background-color: white;
+
+  &:hover {
+    color: #39648d;
+    border-bottom: 3px solid #39648d;
   }
-  
-  .homeButton {
-    width: fit-content;
-    height: 55px;
-    margin-left: 50px;
-    color: #434651;
+}
+
+#logOutButton {
+  width: fit-content;
+  height: 80px;
+  margin-left: 7px;
+  padding-top: 10px;
+  color: #434651;
+  border: none;
+  background-color: white;
+
+  &:hover {
+    color: #39648d;
+    border-bottom: 3px solid #39648d;
   }
-  
-  .optionsButton {
-    width: fit-content;
-    height: 55px;
-    margin-left: 10px;
-    color: #434651;
-  }
-  
-  mat-icon {
-    font-size: 35px;
-    height: fit-content;
-    width: fit-content;
-  }
-  
-  #logInButton {
-    float: right;
-    width: fit-content;
-    height: 55px;
-    color: #434651;
-  }
-  
-  #logOutButton {
-    float: right;
-    margin: 10px;
-    width: fit-content;
-    height: 55px;
-    color: #434651;
-  }
+}

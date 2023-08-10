@@ -9,14 +9,14 @@ import { ChatService } from 'src/app/services/chat.service';
 })
 export class NavbarComponent {
   user: any;
-  fromUID: any;
+  image: any;
   
   constructor(private chatservice: ChatService, public authService: AuthService){
   }
   ngOnInit(): void {
     this.authService.user$.subscribe((user: any) => {
       this.user = user;
-      this.fromUID = user.displayName;
+      this.image = user.imageURL;
     });
   }
 
