@@ -20,14 +20,22 @@
       <span class="material-symbols-outlined" style="font-size: 35px;"> list </span>
     </button>
 
-    <div class="noAccountIcon" *ngIf="user === null">
+    <button class="searchButton">
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
       />
-      <span class="material-symbols-outlined" style="font-size: 35px;"> no_accounts </span>
-    </div>
-  
+      <span class="material-symbols-outlined" style="font-size: 35px;"> notifications </span>
+    </button>
+
+    <button class="notificationButton">
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      />
+      <span class="material-symbols-outlined" style="font-size: 35px;"> search </span>
+    </button>
+
     <button
       id="logInButton"
       *ngIf="user === null"
@@ -51,5 +59,17 @@
     />
     <span class="material-symbols-outlined" style="font-size: 32px;"> logout </span>
     </button>
+
+    <div class="noAccountIcon" *ngIf="user === null">
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+      />
+      <span class="material-symbols-outlined" style="font-size: 35px;"> no_accounts </span>
+    </div>
+
+    <div class="inAccountAvatar" *ngIf="user !== null">
+      <img src="https://cdn.bongdaplus.vn/Assets/Media/2016/09/30/67/sheva300916-00.jpg" style="height: 55px; width: 55px;border-radius: 50%;">
+    </div>
   </div>
 </div>

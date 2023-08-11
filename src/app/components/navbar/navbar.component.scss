@@ -18,11 +18,11 @@ $gray: #92959e;
 .navbarContents {
   box-sizing: border-box;
   background-color: white;
-  width: 65%;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
   padding-right: 15px;
-  padding-left: 15px;
+  padding-left: 150px;
   display: flex;
   align-items: center;
   height: inherit;
@@ -36,12 +36,13 @@ $gray: #92959e;
   line-height: 0.65;
   font-family: "Lobster", cursive;
   height: fit-content;
+  margin-left: 10px;
 }
 
 .homeButton {
   width: fit-content;
   height: 80px;
-  margin-left: 260px;
+  margin-left: 230px;
   padding-top: 10px;
   color: #434651;
   border: none;
@@ -56,7 +57,37 @@ $gray: #92959e;
 .optionsButton {
   width: fit-content;
   height: 80px;
-  margin-left: 10px;
+  margin-left: 70px;
+  padding-top: 10px;
+  color: #434651;
+  border: none;
+  background-color: white;
+
+  &:hover {
+    color: #39648d;
+    border-bottom: 3px solid #39648d;
+  }
+}
+
+.searchButton {
+  width: fit-content;
+  height: 80px;
+  margin-left: 70px;
+  padding-top: 10px;
+  color: #434651;
+  border: none;
+  background-color: white;
+
+  &:hover {
+    color: #39648d;
+    border-bottom: 3px solid #39648d;
+  }
+}
+
+.notificationButton {
+  width: fit-content;
+  height: 80px;
+  margin-left: 70px;
   padding-top: 10px;
   color: #434651;
   border: none;
@@ -71,8 +102,18 @@ $gray: #92959e;
 .noAccountIcon{
   width: fit-content;
   height: 50px;
-  margin-left: 10px;
+  margin-left: 270px;
   padding-top: 20px;
+  color: #434651;
+  border: none;
+  background-color: white;
+}
+
+.inAccountAvatar{
+  width: fit-content;
+  height: 60px;
+  margin-left: 270px;
+  padding-top: 10px;
   color: #434651;
   border: none;
   background-color: white;
@@ -81,7 +122,7 @@ $gray: #92959e;
 #logInButton {
   width: fit-content;
   height: 80px;
-  margin-left: 7px;
+  margin-left: 70px;
   padding-top: 10px;
   color: #434651;
   border: none;
@@ -96,7 +137,7 @@ $gray: #92959e;
 #logOutButton {
   width: fit-content;
   height: 80px;
-  margin-left: 7px;
+  margin-left: 70px;
   padding-top: 10px;
   color: #434651;
   border: none;
@@ -106,4 +147,6 @@ $gray: #92959e;
     color: #39648d;
     border-bottom: 3px solid #39648d;
   }
+
+
 }
