@@ -13,7 +13,7 @@ const initialState: ChatState = {
 
 export const ChatReducer = createReducer(
     initialState,
-    on(ChatActions.getPrevMessage, (state) => {
+    on(ChatActions.getPrevMessages, (state) => {
         return {
             ...state,
             loading: true,
@@ -29,6 +29,28 @@ export const ChatReducer = createReducer(
         }
     }),
     on(ChatActions.getPrevMessagesFailure, (state, { error }) => {
+        return {
+            ...state,
+            loading: false,
+            error,
+        }
+    }),
+    on(ChatActions.getMessages, (state) => {
+        return {
+            ...state,
+            loading: true,
+            error: '',
+        }
+    }),
+    on(ChatActions.getMessagesSuccess, (state, action) => {
+        return {
+            ...state,
+            messages: action.messages,
+            loading: false,
+            error: '',
+        }
+    }),
+    on(ChatActions.getMessagesFailure, (state, { error }) => {
         return {
             ...state,
             loading: false,

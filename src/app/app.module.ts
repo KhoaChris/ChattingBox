@@ -15,6 +15,8 @@ import { LeftNavbarComponent } from './components/left-navbar/left-navbar.compon
 import { MainBoxChatComponent } from './components/main-box-chat/main-box-chat.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { ChatReducer } from './ngrx/reducer/chat.reducer';
+import { ChatEffects } from './ngrx/effect/chat.effect';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, LeftNavbarComponent, MainBoxChatComponent],
@@ -28,8 +30,8 @@ import { EffectsModule } from '@ngrx/effects';
     MatIconModule,
     MatButtonModule,
     NoopAnimationsModule,
-    StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([]),
+    StoreModule.forRoot({ chats: ChatReducer }, {}),
+    EffectsModule.forRoot([ChatEffects]),
   ],
   providers: [],
   bootstrap: [AppComponent],

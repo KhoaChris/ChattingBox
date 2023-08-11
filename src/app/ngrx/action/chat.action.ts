@@ -2,9 +2,8 @@ import { Chat } from '../../models/chat.models';
 import { createAction, props } from '@ngrx/store';
 
 export const ChatActions = {
-  getPrevMessage: createAction(
+  getPrevMessages: createAction(
     '[Chat] Get Prev Message',
-    props<{ roomId: string }>()
   ),
   getPrevMessagesSuccess: createAction(
     '[Chat] Get Prev Message Success',
@@ -14,4 +13,17 @@ export const ChatActions = {
     '[Chat] Get Prev Message Failure',
     props<{ error: string }>()
   ),
+
+  getMessages: createAction(
+    '[Chat] Get Message',
+  ),
+  getMessagesSuccess: createAction(
+    '[Chat] Get Message Success',
+    props<{ messages: Chat[] }>()
+  ),
+  getMessagesFailure: createAction(
+    '[Chat] Get Message Failure',
+    props<{ error: string }>()
+  ),
+
 };

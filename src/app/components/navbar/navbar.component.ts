@@ -10,6 +10,8 @@ import { ChatService } from 'src/app/services/chat.service';
 export class NavbarComponent {
   user: any;
   image: any;
+  chats$ = this.chatservice.chats$;
+  fromUID: string = '';
 
   constructor(
     private chatservice: ChatService,

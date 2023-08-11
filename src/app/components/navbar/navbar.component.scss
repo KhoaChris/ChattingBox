@@ -112,11 +112,14 @@ $gray: #92959e;
 .inAccountAvatar{
   width: fit-content;
   height: 60px;
-  margin-left: 270px;
+  margin-left: 220px;
   padding-top: 10px;
   color: #434651;
   border: none;
   background-color: white;
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
 }
 
 #logInButton {
