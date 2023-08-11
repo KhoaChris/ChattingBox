@@ -69,9 +69,6 @@
     </div>
 
     <div class="inAccountAvatar" *ngIf="user !== null" >
-      <div class="" *ngFor="let chat of chats$ | async">
-        <p *ngIf="chat.from === fromUID">{{chat.from}}</p>
-      </div>
       <img src="https://cdn.bongdaplus.vn/Assets/Media/2016/09/30/67/sheva300916-00.jpg" style="height: 55px; width: 55px;border-radius: 50%;">
     </div>
   </div>
